@@ -3,7 +3,16 @@ import { ArrowDown } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="accueil" className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-eveil-olive/20 via-eveil-mist/30 to-eveil-sky z-0"></div>
+      {/* Background image */}
+      <img
+        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop"
+        alt="Nature apaisante"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        loading="eager"
+        fetchPriority="high"
+      />
+      {/* Color overlay for brand look and legibility */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-eveil-mist/50 to-eveil-sky/70 z-0" />
 
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-eveil-gold rounded-full blur-3xl"></div>

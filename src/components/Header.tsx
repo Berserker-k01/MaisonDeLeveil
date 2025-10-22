@@ -17,9 +17,13 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-eveil-olive rounded-full flex items-center justify-center text-white font-bold text-xl">
-              ME
-            </div>
+            <img
+              src="/logorvuv2.png"
+              alt="Logo La Maison de l'Éveil"
+              className="w-12 h-12 rounded-full object-contain"
+              width={48}
+              height={48}
+            />
             <div>
               <h1 className="text-xl font-bold text-eveil-olive">La Maison de l'Éveil</h1>
               <p className="text-xs text-gray-600">ONG d'éveil et de transformation</p>
@@ -31,7 +35,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-eveil-olive transition-colors duration-300 font-medium"
+                className="text-gray-700 hover:text-eveil-olive transition-colors duration-300 font-medium underline-offset-4 hover:underline"
               >
                 {item.label}
               </a>

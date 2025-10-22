@@ -1,4 +1,4 @@
-import { Eye, Target, Compass } from 'lucide-react';
+import { Eye, Target, Compass, Users } from 'lucide-react';
 
 export default function About() {
   return (
@@ -69,8 +69,8 @@ export default function About() {
                 key={index}
                 className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-20 h-20 bg-eveil-mist rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
-                  👥
+                <div className="w-20 h-20 bg-eveil-mist rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Users className="text-eveil-olive" size={40} aria-hidden="true" />
                 </div>
                 <h4 className="font-bold text-eveil-olive">{role}</h4>
               </div>

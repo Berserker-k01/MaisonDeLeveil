@@ -6,19 +6,22 @@ export default function Testimonials() {
       name: 'Sophie Martin',
       role: 'Participante aux retraites',
       content: 'Cette expérience a transformé ma vision de la vie. J\'ai trouvé la paix intérieure que je cherchais depuis des années.',
-      image: '👤',
+      image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=256&auto=format&fit=crop',
+      alt: 'Portrait de Sophie Martin',
     },
     {
       name: 'Jean Dupont',
       role: 'Bénévole',
       content: 'Contribuer à La Maison de l\'Éveil m\'a permis de donner un sens profond à mon quotidien tout en rencontrant des personnes inspirantes.',
-      image: '👤',
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop',
+      alt: 'Portrait de Jean Dupont',
     },
     {
       name: 'Marie Lambert',
       role: 'Membre',
       content: 'Un lieu d\'accueil chaleureux où chacun peut grandir à son rythme, entouré de bienveillance et de sagesse.',
-      image: '👤',
+      image: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=crop',
+      alt: 'Portrait de Marie Lambert',
     },
   ];
 
@@ -46,9 +49,14 @@ export default function Testimonials() {
                 "{testimonial.content}"
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-eveil-mist rounded-full flex items-center justify-center text-2xl mr-4">
-                  {testimonial.image}
-                </div>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.alt}
+                  className="w-12 h-12 rounded-full object-cover mr-4"
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                />
                 <div>
                   <h4 className="font-bold text-eveil-olive">{testimonial.name}</h4>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>

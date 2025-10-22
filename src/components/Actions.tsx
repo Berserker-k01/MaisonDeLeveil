@@ -23,12 +23,12 @@ export default function Actions() {
   ];
 
   const gallery = [
-    { emoji: '🧘', alt: 'Méditation' },
-    { emoji: '🌿', alt: 'Nature' },
-    { emoji: '📚', alt: 'Éducation' },
-    { emoji: '🕯️', alt: 'Spiritualité' },
-    { emoji: '🤝', alt: 'Communauté' },
-    { emoji: '🌅', alt: 'Éveil' },
+    { src: 'https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?q=80&w=600&auto=format&fit=crop', alt: 'Séance de méditation en groupe' },
+    { src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=600&auto=format&fit=crop', alt: 'Nature et marche consciente' },
+    { src: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=600&auto=format&fit=crop', alt: 'Atelier et apprentissage' },
+    { src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=600&auto=format&fit=crop', alt: 'Moment de contemplation' },
+    { src: 'https://images.unsplash.com/photo-1520975922284-8b456906c813?q=80&w=600&auto=format&fit=crop', alt: 'Communauté et entraide' },
+    { src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop', alt: 'Aube et renouveau' },
   ];
 
   return (
@@ -71,11 +71,13 @@ export default function Actions() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {gallery.map((item, index) => (
-              <div
-                key={index}
-                className="aspect-square bg-gradient-to-br from-eveil-mist to-eveil-sky rounded-xl flex items-center justify-center text-6xl hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-xl"
-              >
-                {item.emoji}
+              <div key={index} className="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>

@@ -12,6 +12,10 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-radibta;
   }
+
+  html { scroll-behavior: smooth; }
+
+  section { scroll-margin-top: 6rem; }
 }
 
 @layer utilities {
@@ -28,5 +32,27 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ffffff;
+    color: #111827;
+    padding: 8px 12px;
+    border-radius: 0 0 0.5rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: top 0.2s ease;
+    z-index: 1000;
+  }
+  .skip-link:focus {
+    top: 0;
+    outline: 2px solid #718C3F;
+    outline-offset: 2px;
+  }
+  :focus-visible {
+    outline: 2px solid #718C3F;
+    outline-offset: 2px;
   }
 }

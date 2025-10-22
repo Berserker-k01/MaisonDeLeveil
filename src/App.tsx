@@ -12,13 +12,15 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <Hero />
-      <Mission />
-      <Testimonials />
-      <About />
-      <Actions />
-      <JoinUs />
-      <Contact />
+      <main id="contenu">
+        <Hero />
+        <Mission />
+        <Testimonials />
+        <About />
+        <Actions />
+        <JoinUs />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
