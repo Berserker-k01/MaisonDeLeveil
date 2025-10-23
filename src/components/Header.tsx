@@ -1,26 +1,27 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Accueil', href: '#accueil' },
-    { label: 'À propos', href: '#apropos' },
-    { label: 'Nos actions', href: '#actions' },
-    { label: 'Nous rejoindre', href: '#rejoindre' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Accueil', to: '/' },
+    { label: 'À propos', to: '/apropos' },
+    { label: 'Nos actions', to: '/actions' },
+    { label: 'Nous rejoindre', to: '/rejoindre' },
+    { label: 'Contact', to: '/contact' },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <Link to="/" aria-label="Aller à l'accueil" className="flex items-center space-x-3 group">
             <img
               src="/logorvuv2.png"
               alt="Logo La Maison de l'Éveil"
-              className="w-12 h-12 rounded-full object-contain"
+              className="w-12 h-12 rounded-full object-contain transition-transform group-hover:scale-105"
               width={48}
               height={48}
             />
@@ -28,17 +29,19 @@ export default function Header() {
               <h1 className="text-xl font-bold text-eveil-olive">La Maison de l'Éveil</h1>
               <p className="text-xs text-gray-600">ONG d'éveil et de transformation</p>
             </div>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-gray-700 hover:text-eveil-olive transition-colors duration-300 font-medium underline-offset-4 hover:underline"
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  `text-gray-700 transition-colors duration-300 font-medium underline-offset-4 hover:underline ${isActive ? 'text-eveil-olive' : 'hover:text-eveil-olive'}`
+                }
               >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
           </nav>
 
@@ -54,14 +57,16 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 space-y-3">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
+              <NavLink
+                key={item.to}
+                to={item.to}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-gray-700 hover:text-eveil-olive transition-colors duration-300 font-medium py-2"
+                className={({ isActive }) =>
+                  `block text-gray-700 transition-colors duration-300 font-medium py-2 ${isActive ? 'text-eveil-olive' : 'hover:text-eveil-olive'}`
+                }
               >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
           </nav>
         )}

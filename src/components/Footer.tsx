@@ -1,4 +1,5 @@
 import { Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,29 +19,29 @@ export default function Footer() {
             <h4 className="text-xl font-bold mb-4">Liens Rapides</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#accueil" className="text-white/90 hover:text-white transition-colors">
+                <Link to="/" className="text-white/90 hover:text-white transition-colors">
                   Accueil
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#apropos" className="text-white/90 hover:text-white transition-colors">
+                <Link to="/apropos" className="text-white/90 hover:text-white transition-colors">
                   À propos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#actions" className="text-white/90 hover:text-white transition-colors">
+                <Link to="/actions" className="text-white/90 hover:text-white transition-colors">
                   Nos actions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#rejoindre" className="text-white/90 hover:text-white transition-colors">
+                <Link to="/rejoindre" className="text-white/90 hover:text-white transition-colors">
                   Nous rejoindre
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-white/90 hover:text-white transition-colors">
+                <Link to="/contact" className="text-white/90 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

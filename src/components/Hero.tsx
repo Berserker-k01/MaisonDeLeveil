@@ -1,16 +1,23 @@
 import { ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
     <section id="accueil" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <img
-        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop"
-        alt="Nature apaisante"
+      {/* Background video */}
+      <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        loading="eager"
-        fetchPriority="high"
-      />
+        src="/mise_en_situation_vidéo.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/logorvuv2.png"
+        aria-label="Vidéo de mise en situation en arrière-plan"
+      >
+        Votre navigateur ne supporte pas la lecture vidéo HTML5.
+      </video>
       {/* Color overlay for brand look and legibility */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-eveil-mist/50 to-eveil-sky/70 z-0" />
 
@@ -26,13 +33,13 @@ export default function Hero() {
         <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-light">
           Un espace de transformation personnelle et de bienveillance pour éveiller votre plein potentiel
         </p>
-        <a
-          href="#apropos"
+        <Link
+          to="/apropos"
           className="inline-flex items-center px-8 py-4 bg-eveil-olive text-white rounded-full font-semibold hover:bg-eveil-olive/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
         >
           Découvrir notre mission
           <ArrowDown className="ml-2" size={20} />
-        </a>
+        </Link>
       </div>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
