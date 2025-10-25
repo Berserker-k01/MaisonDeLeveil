@@ -38,7 +38,7 @@ export default function Actions() {
           <h2 className="text-4xl md:text-5xl font-bold text-eveil-olive mb-6">
             Nos Actions
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed font-nunito">
             Découvrez nos initiatives pour accompagner l'éveil personnel et contribuer au bien-être collectif
           </p>
         </div>
@@ -54,8 +54,8 @@ export default function Actions() {
                 {project.icon}
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-eveil-olive mb-4">{project.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{project.description}</p>
+                <h3 className="text-2xl font-bold text-eveil-olive mb-4 font-radibta">{project.title}</h3>
+                <p className="text-gray-700 leading-relaxed font-nunito">{project.description}</p>
               </div>
             </div>
           ))}
@@ -64,9 +64,9 @@ export default function Actions() {
         <div className="bg-white rounded-2xl p-12 shadow-lg fade-in">
           <div className="flex items-center justify-center mb-8">
             <Image className="text-eveil-olive mr-3" size={32} />
-            <h3 className="text-3xl font-bold text-eveil-olive">Galerie</h3>
+            <h3 className="text-3xl font-bold text-eveil-olive font-radibta">Galerie</h3>
           </div>
-          <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto font-nunito">
             Quelques moments inspirants capturés lors de nos événements et activités
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">

@@ -11,7 +11,7 @@ export default {
         'eveil-sky': '#F4FAFC',
       },
       fontFamily: {
-        'radibta': ['Georgia', 'serif'],
+        'radibta': ['Radibta', 'sans-serif'],
         'nunito': ['Nunito', 'sans-serif'],
       },
     },

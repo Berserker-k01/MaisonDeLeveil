@@ -26,7 +26,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-eveil-olive mb-6">
             Contactez-Nous
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed font-nunito">
             Nous sommes à votre écoute. N'hésitez pas à nous écrire pour toute question ou demande d'information
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="fade-in">
             <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
-              <h3 className="text-2xl font-bold text-eveil-olive mb-6">Informations de Contact</h3>
+              <h3 className="text-2xl font-bold text-eveil-olive mb-6 font-radibta">Informations de Contact</h3>
 
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -42,8 +42,8 @@ export default function Contact() {
                     <MapPin className="text-eveil-olive" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-1">Adresse</h4>
-                    <p className="text-gray-600">123 Rue de la Paix, 75001 Paris, France</p>
+                    <h4 className="font-bold text-gray-800 mb-1 font-radibta">Adresse</h4>
+                    <p className="text-gray-600 font-nunito">123 Rue de la Paix, 75001 Paris, France</p>
                   </div>
                 </div>
 
@@ -52,8 +52,8 @@ export default function Contact() {
                     <Mail className="text-eveil-gold" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-1">Email</h4>
-                    <p className="text-gray-600">contact@maisondeleveil.org</p>
+                    <h4 className="font-bold text-gray-800 mb-1 font-radibta">Email</h4>
+                    <p className="text-gray-600 font-nunito">contact@maisondeleveil.org</p>
                   </div>
                 </div>
 
@@ -62,15 +62,15 @@ export default function Contact() {
                     <Phone className="text-eveil-sage" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-1">Téléphone</h4>
-                    <p className="text-gray-600">+33 1 23 45 67 89</p>
+                    <h4 className="font-bold text-gray-800 mb-1 font-radibta">Téléphone</h4>
+                    <p className="text-gray-600 font-nunito">+33 1 23 45 67 89</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-eveil-olive mb-6">Suivez-Nous</h3>
+              <h3 className="text-2xl font-bold text-eveil-olive mb-6 font-radibta">Suivez-Nous</h3>
               <div className="flex space-x-4">
                 <a href="#" className="bg-eveil-olive text-white p-4 rounded-full hover:bg-eveil-olive/90 transition-all duration-300 hover:scale-110">
                   <Facebook size={24} />
@@ -87,11 +87,11 @@ export default function Contact() {
 
           <div className="fade-in" style={{ animationDelay: '0.2s' }}>
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-eveil-olive mb-6">Envoyez-nous un Message</h3>
+              <h3 className="text-2xl font-bold text-eveil-olive mb-6 font-radibta">Envoyez-nous un Message</h3>
 
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-2 font-radibta">
                     Nom complet
                   </label>
                   <input
@@ -101,13 +101,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all font-nunito"
                     placeholder="Votre nom"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2 font-radibta">
                     Email
                   </label>
                   <input
@@ -117,13 +117,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all font-nunito"
                     placeholder="votre.email@exemple.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">
+                  <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2 font-radibta">
                     Sujet
                   </label>
                   <input
@@ -133,13 +133,13 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all font-nunito"
                     placeholder="Objet de votre message"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
+                  <label htmlFor="message" className="block text-gray-700 font-semibold mb-2 font-radibta">
                     Message
                   </label>
                   <textarea
@@ -149,14 +149,14 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-eveil-olive transition-all resize-none font-nunito"
                     placeholder="Votre message..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-eveil-olive text-white px-8 py-4 rounded-lg font-semibold hover:bg-eveil-olive/90 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+                  className="w-full bg-eveil-olive text-white px-8 py-4 rounded-lg font-semibold font-radibta hover:bg-eveil-olive/90 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
                 >
                   Envoyer le message
                   <Send className="ml-2" size={20} />

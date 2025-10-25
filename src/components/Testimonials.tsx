@@ -32,7 +32,7 @@ export default function Testimonials() {
           <h2 className="text-4xl md:text-5xl font-bold text-eveil-olive mb-6">
             Témoignages
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto font-nunito">
             Découvrez les expériences de ceux qui ont été touchés par notre mission
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Testimonials() {
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <Quote className="text-eveil-gold mb-4" size={40} />
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
+              <p className="text-gray-700 mb-6 leading-relaxed italic font-nunito">
                 "{testimonial.content}"
               </p>
               <div className="flex items-center">
@@ -58,8 +58,8 @@ export default function Testimonials() {
                   loading="lazy"
                 />
                 <div>
-                  <h4 className="font-bold text-eveil-olive">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <h4 className="font-bold text-eveil-olive font-radibta">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-600 font-nunito">{testimonial.role}</p>
                 </div>
               </div>
             </div>

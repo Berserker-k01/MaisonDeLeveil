@@ -26,8 +26,8 @@ export default function Header() {
               height={48}
             />
             <div>
-              <h1 className="text-xl font-bold text-eveil-olive">La Maison de l'Éveil</h1>
-              <p className="text-xs text-gray-600">ONG d'éveil et de transformation</p>
+              <h1 className="text-xl font-bold text-eveil-olive font-radibta uppercase">LA MAISON DE L'ÉVEIL</h1>
+              <p className="text-xs text-gray-600 font-nunito">ONG d'éveil et de transformation</p>
             </div>
           </Link>
 
@@ -37,7 +37,7 @@ export default function Header() {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `text-gray-700 transition-colors duration-300 font-medium underline-offset-4 hover:underline ${isActive ? 'text-eveil-olive' : 'hover:text-eveil-olive'}`
+                  `text-gray-700 transition-colors duration-300 font-medium font-radibta underline-offset-4 hover:underline ${isActive ? 'text-eveil-olive' : 'hover:text-eveil-olive'}`
                 }
               >
                 {item.label}
@@ -62,7 +62,7 @@ export default function Header() {
                 to={item.to}
                 onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) =>
-                  `block text-gray-700 transition-colors duration-300 font-medium py-2 ${isActive ? 'text-eveil-olive' : 'hover:text-eveil-olive'}`
+                  `block text-gray-700 transition-colors duration-300 font-medium font-radibta py-2 ${isActive ? 'text-eveil-olive' : 'hover:text-eveil-olive'}`
                 }
               >
                 {item.label}
