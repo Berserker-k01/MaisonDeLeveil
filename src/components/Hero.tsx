@@ -7,15 +7,16 @@ export default function Hero() {
       {/* Background video */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="/mise_en_situation_vidéo.mp4"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        poster="/logorvuv2.png"
+        poster="/hero-poster.png"
         aria-label="Vidéo de mise en situation en arrière-plan"
       >
+        <source src="/hero.mp4" type="video/mp4" />
+        <source src="/mise_en_situation_vidéo.mp4" type="video/mp4" />
         Votre navigateur ne supporte pas la lecture vidéo HTML5.
       </video>
 
