@@ -7,6 +7,7 @@ function ensureDir(p) {
 
 function copy(src, dest) {
   fs.copyFileSync(src, dest);
+  console.log(`[copy-static] copied`, path.basename(src), '->', path.relative(process.cwd(), dest));
 }
 
 (function main() {
@@ -15,7 +16,11 @@ function copy(src, dest) {
   ensureDir(dist);
 
   const mappings = [
+    // Video: keep original name and provide an alias without accent as fallback
+    { src: path.join(projectRoot, 'mise_en_situation_vidéo.mp4'), dest: path.join(dist, 'mise_en_situation_vidéo.mp4') },
     { src: path.join(projectRoot, 'mise_en_situation_vidéo.mp4'), dest: path.join(dist, 'hero.mp4') },
+    // Poster: keep original logo path for Header and provide explicit hero poster
+    { src: path.join(projectRoot, 'logorvuv2.png'), dest: path.join(dist, 'logorvuv2.png') },
     { src: path.join(projectRoot, 'logorvuv2.png'), dest: path.join(dist, 'hero-poster.png') },
   ];
 
