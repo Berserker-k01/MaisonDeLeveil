@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: maison-de-leveil
+    env: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    redirects:
+      - source: /*
+        destination: /index.html
+        status: 200
